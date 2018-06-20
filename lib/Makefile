@@ -41,9 +41,9 @@ system.o \
 thread.o \
 timer_c.o
 
-all: nicslu.a
+all: libnicslu.a
 
-nicslu.a: ${OBJS}
+libnicslu.a: ${OBJS}
 	$(MAKELIB) $@ $^
 	$(RANLIB) $@
 
@@ -51,4 +51,4 @@ nicslu.a: ${OBJS}
 	$(COMPILE) $< -o $@
 
 clean:
-	rm -f *.o nicslu.a
+	rm -f *.o libnicslu.a
